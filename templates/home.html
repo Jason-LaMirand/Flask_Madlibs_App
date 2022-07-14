@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<h1>Let's play Madlibs!</h1>
+
+<form action="/madlibs">
+    <button class="submit">Default Game</button>
+</form>
+<form action="/choose-your-own">
+    <button class="submit">Choose your own Madlib</button>
+</form>
+{% endblock %}

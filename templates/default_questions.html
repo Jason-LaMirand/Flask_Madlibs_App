@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<h1>Madlibs</h1>
+
+<form action="/default-story" class="form">
+    {% for word in prompts %}
+    <label for="words">{{word}}:</label> <br>
+    <input type="text" placeholder="Write your {{word}} here." name="{{word}}"> <br>
+    {% endfor %}
+    <button class="submit">SUBMIT</button>
+</form>
+{% endblock %}
